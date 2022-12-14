@@ -13,6 +13,22 @@ spring:
               uri: lb://SERVICE-CLIENTS
               predicates:
                 - Path=/v1/client/**
+            - id: service-moveActive
+              uri: lb://SERVICE-MOVEACTIVE
+              predicates:
+                - Path=/v1/moveActive/**
+            - id: service-movePassive
+              uri: lb://SERVICE-MOVEPASSIVE
+              predicates:
+                - Path=/v1/movePassive/**
+            - id: service-productActive
+              uri: lb://SERVICE-PRODUCTACTIVE
+              predicates:
+                - Path=/v1/productActive/**
+            - id: service-productPassive
+              uri: lb://SERVICE-PRODUCTPASSIVE
+              predicates:
+                - Path=/v1/productPassive/**
           discovery:
           locator:
             enabled: true
